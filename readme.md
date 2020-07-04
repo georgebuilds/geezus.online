@@ -20,7 +20,9 @@
 
 #### ADDING CUSTOM HANDLERS
 
-Add new class to /app/ActionHandlers or /app/IntentHandlers respectively. The 
+Geezus will try to find a matching action handler first. If no matching action handlers are found, Geezus
+will try to find a matching intent handler second. To add your own handler, 
+add a new class to /app/ActionHandlers or /app/IntentHandlers respectively. The 
 name of the class should match the name of the intent or action in DialogFlow. 
 Space characters from DialogFlow intent/action names will be removed, and dashes will be replaced
 with underscores. As an example, the "Look Up Image" action would be matched up with the LookUpImage.php class, 
