@@ -29,5 +29,5 @@ same example as before, the full name of the new class would be
 
 `\Geezus\ActionHandlers\LookUpImage`
 
-Your handler should have a method called "run" . Feel free to implement the provided HandlerInterface 
+Your handler should have a method called "fulfill" . Feel free to implement the provided HandlerInterface 
  interface to ensure ongoing compatibility.
