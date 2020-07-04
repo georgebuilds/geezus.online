@@ -5,7 +5,8 @@ return [
 
     "bot" => [
 
-        "name" => "Geezus"
+        "name" => "Geezus",
+        "key" => ""  // Set this key as the value for the X-Geezus-Key http header in Dialogflow
 
     ],
 

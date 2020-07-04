@@ -9,9 +9,11 @@
 2. Install the dependencies
 
 `composer install`
+
 3. Change properties in configuration.php to your liking
-4. Run Geezus
+4. Add "X-Geezus-Key" header in DialogFlow console's fulfillment settings, using key from above configuration file 
+5. Run Geezus
 
 `php -S localhost:80 -t public`
 
-5. Visit Geezus with your web browser at http://localhost/
+6. Visit Geezus with your web browser at http://localhost/
