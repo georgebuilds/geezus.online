@@ -1,0 +1,17 @@
+body{ background-color:#3288af; }
+#main-container {
+    text-align: center;
+    height: 100vh !important;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+img{
+    max-width: 50vw;
+    max-height: 50vh;
+}
+#button-row .btn{ width:100%; }
+#footer-row{ margin-top: 50px; }
+#open-source-card { text-align: center; }
+#open-source-card img{ height: 65px; }
+#footer-row .card-body{ background-color: rgba(255, 255, 255, 0.5); }

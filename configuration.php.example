@@ -1,0 +1,23 @@
+<?php
+
+
+return [
+
+    "bot" => [
+
+        "name" => "Geezus"
+
+    ],
+
+    "dialogflow" => [
+
+        "iframe_url" => ""
+
+    ],
+
+    "coin-api" => [
+
+        "key" => ""
+    ]
+
+];
