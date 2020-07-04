@@ -17,17 +17,17 @@ require __DIR__."/../start.php";
     <div class="container">
         <div class="row" id="button-row">
             <div class="col-md-3">
-                <a class="btn btn-lg btn-outline-light" href="https://geezus.online/visit/">
+                <a class="btn btn-lg btn-outline-light" href="https://<?= $config['bot']['hostname'] ?>/visit/">
                     Web
                 </a>
             </div>
             <div class="col-md-3">
-                <a class="btn btn-lg btn-outline-light" href="https://t.me/GeezusOnlineBot" >
+                <a class="btn btn-lg btn-outline-light" href="https://t.me/<?= $config['bot']['telegram_handle'] ?>" >
                     Telegram
                 </a>
             </div>
             <div class="col-md-3">
-                <a class="btn btn-lg btn-outline-light "  href="https://twitter.com/geezusonline">
+                <a class="btn btn-lg btn-outline-light "  href="https://twitter.com/<?= $config['bot']['twitter_handle'] ?>">
                     Twitter
                 </a>
             </div>

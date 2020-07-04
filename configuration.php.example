@@ -6,7 +6,10 @@ return [
     "bot" => [
 
         "name" => "Geezus",
-        "key" => ""  // Set this key as the value for the X-Geezus-Key http header in Dialogflow
+        "hostname" => "localhost",
+        "key" => "",  // Set this key as the value for the X-Geezus-Key http header in Dialogflow
+        "telegram_handle" => "",
+        "twitter_handle" => ""
 
     ],
 
