@@ -9,6 +9,7 @@
 2. Install the dependencies
 
 `composer install`
+
 3. Change properties in configuration.php to your liking
 4. Run Geezus
 
