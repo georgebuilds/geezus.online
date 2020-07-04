@@ -5,9 +5,10 @@ namespace Geezus\IntentHandlers;
 
 
 use Geezus\IntentHandler;
+use Geezus\Interfaces\HandlerInterface;
 use Goutte\Client;
 
-class LookUpMeme extends IntentHandler {
+class LookUpMeme extends IntentHandler implements HandlerInterface {
 
 
     function fulfill() : void {

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Geezus;
 
 use Dialogflow\WebhookClient;
@@ -19,10 +18,14 @@ abstract class Webhook {
 
         if($bot_key == $provided_key){
 
-            $class_name = "Geezus\IntentHandlers\\".$geezus->getIntent();
+            $intent_handler_class = "Geezus\IntentHandlers\\".str_replace(" ", "", $geezus->getIntent());
+            $action_handler_class = "Geezus\ActionHandlers\\".str_replace(" ", "", $geezus->getAction());
 
-            if(class_exists($class_name)){
-                $handler = new $class_name($geezus);
+            if(class_exists($action_handler_class)){
+                $handler = new $action_handler_class($geezus);
+                $handler->fulfill();
+            } elseif(class_exists($intent_handler_class)){
+                $handler = new $intent_handler_class($geezus);
                 $handler->fulfill();
             } else {
                 $geezus->reply("This is the Geezus Online Special Services API replying here. I have no idea what you're trying to do. Sorry.");

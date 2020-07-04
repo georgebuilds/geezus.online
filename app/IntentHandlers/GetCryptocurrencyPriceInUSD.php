@@ -5,8 +5,9 @@ namespace Geezus\IntentHandlers;
 
 
 use Geezus\IntentHandler;
+use Geezus\Interfaces\HandlerInterface;
 
-class GetCryptocurrencyPriceInUSD extends IntentHandler {
+class GetCryptocurrencyPriceInUSD extends IntentHandler implements HandlerInterface {
 
     function fulfill(){
 
