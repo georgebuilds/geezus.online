@@ -3,6 +3,9 @@
 - PHP 7.3
 - An existing DialogFlow chatbot agent
 
+#### DialogFlow CONFIGURATION
+1. Set fulfillment webhook url to https://YOURSITE.COM/hook.php
+
 #### INSTALLATION
 
 1. Download the files or clone the repository
@@ -29,7 +32,9 @@ with underscores. As an example, the "Look Up Image" action would be matched up 
 and so forth. The namespace of your handler classes should match PSR4 standards. Using the 
 same example as before, the full name of the new class would be
 
-`\Geezus\ActionHandlers\LookUpImage`
+```php
+\Geezus\ActionHandlers\LookUpImage
+```
 
 Your handler should have a method called "fulfill" . Feel free to implement the provided HandlerInterface 
  interface to ensure ongoing compatibility.
