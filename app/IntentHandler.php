@@ -8,6 +8,8 @@ use Dialogflow\WebhookClient;
 
 abstract class IntentHandler {
 
+    public $enabled = true;
+
     protected $geezus;
 
     protected $action;
