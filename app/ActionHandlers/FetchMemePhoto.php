@@ -3,17 +3,17 @@
 namespace Geezus\ActionHandlers;
 
 use Geezus\ActionHandler;
+use Geezus\Interfaces\HandlerInterface;
 use Goutte\Client;
 
-class FetchMemePhoto extends ActionHandler {
+class FetchMemePhoto extends ActionHandler implements HandlerInterface {
 
-    function fulfill(){
+    function fulfill() : ?bool {
 
         $session = $this->geezus->getSession();
         $context = $this->geezus->getContext('lookupmeme-followup');
 
         $meme_name = $context->getParameters()['memeName'];
-
 
         $client = new Client;
         $crawler = $client->request('GET', "https://knowyourmeme.com/search?q=".urlencode($meme_name),
@@ -27,6 +27,7 @@ class FetchMemePhoto extends ActionHandler {
         $image->setFallbackText('Picture of '.$meme_name);
 
         $this->geezus->reply($image);
+        return true;
     }
 
 }

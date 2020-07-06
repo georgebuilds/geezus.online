@@ -9,18 +9,19 @@ use Geezus\Interfaces\HandlerInterface;
 
 class GetCryptocurrencyPriceInUSD extends IntentHandler implements HandlerInterface {
 
-    function fulfill(){
-
+    function fulfill() : ?bool {
 
         $symbol = is_array($this->parameters['cryptocurrency']) ? implode(" ", $this->parameters['cryptocurrency']) : $this->parameters['cryptocurrency'];
 
         if($price_data = $this->get_currency_unit_price($symbol)){
 
             $this->geezus->reply("The price of 1 ".$price_data->asset_id_base." is $".number_format($price_data->rate, 2)." USD");
-
+            return true;
         } else {
             $this->geezus->reply("Sorry I just could't find data for $symbol");
+            return false;
         }
+        return null;
     }
 
     private function get_currency_unit_price(string $symbol = 'XTZ'){

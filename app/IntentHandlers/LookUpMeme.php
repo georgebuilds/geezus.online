@@ -10,7 +10,7 @@ use Goutte\Client;
 
 class LookUpMeme extends IntentHandler implements HandlerInterface {
 
-    function fulfill() : void {
+    function fulfill() : ?bool {
 
         $meme_name = is_array($this->parameters['memeName']) ? implode(" ", $this->parameters['memeName']) : $this->parameters['memeName'];
 
@@ -26,6 +26,10 @@ class LookUpMeme extends IntentHandler implements HandlerInterface {
             if(($i<=1) && (substr($text,0,1)!="[")) $this->geezus->reply($text);
 
         });
+
+        return true;
+
+        return null;
 
 //        $suggestion = \Dialogflow\RichMessage\Suggestion::create(['Show me the image', 'Cool, thanks!']);
 //        $this->geezus->reply($suggestion);

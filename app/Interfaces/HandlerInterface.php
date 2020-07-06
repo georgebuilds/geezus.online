@@ -6,6 +6,6 @@ namespace Geezus\Interfaces;
 
 interface HandlerInterface {
 
-    public function fulfill();
+    public function fulfill() : ?bool ;
 
 }
