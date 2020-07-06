@@ -10,7 +10,6 @@ use Goutte\Client;
 
 class LookUpMeme extends IntentHandler implements HandlerInterface {
 
-
     function fulfill() : void {
 
         $meme_name = is_array($this->parameters['memeName']) ? implode(" ", $this->parameters['memeName']) : $this->parameters['memeName'];
