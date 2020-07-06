@@ -24,9 +24,12 @@ class LookUpMeme extends IntentHandler implements HandlerInterface {
         $crawler->filter("section.bodycopy p")->each(function ($node, $i){
 
             $text = $node->text();
-            if(($i<=2) && (substr($text,0,1)!="[")) $this->geezus->reply($text);
+            if(($i<=1) && (substr($text,0,1)!="[")) $this->geezus->reply($text);
 
         });
+
+//        $suggestion = \Dialogflow\RichMessage\Suggestion::create(['Show me the image', 'Cool, thanks!']);
+//        $this->geezus->reply($suggestion);
 
     }
 

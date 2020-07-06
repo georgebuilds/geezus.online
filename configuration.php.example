@@ -16,7 +16,6 @@ return [
     "dialogflow" => [
 
         "iframe_url" => ""
-
     ],
 
     "coin-api" => [
